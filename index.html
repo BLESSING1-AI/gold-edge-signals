@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoldEdge - Free Gold Signals & Setups</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { background: #0f172a; color: #e2e8f0; }
+    .signal-card { transition: all 0.2s; }
+    .signal-card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3); }
+    .buy { border-left: 4px solid #22c55e; }
+    .sell { border-left: 4px solid #ef4444; }
+  </style>
+</head>
+<body class="min-h-screen">
+  <!-- Header -->
+  <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-lg flex items-center justify-center text-xl font-bold text-slate-900">G</div>
+        <div>
+          <h1 class="text-xl font-bold text-white">GoldEdge</h1>
+          <p class="text-xs text-slate-400">Free Gold Signals • Full Context Setups</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="text-sm bg-green-500/20 text-green-400 px-3 py-1 rounded-full">Free Forever (for now)</span>
+        <button class="text-slate-400 hover:text-white"><i class="fas fa-bell"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <!-- Stats Bar -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+        <p class="text-slate-400 text-sm">Win Rate</p>
+        <p class="text-2xl font-bold text-green-400">68%</p>
+      </div>
+      <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+        <p class="text-slate-400 text-sm">Avg RR</p>
+        <p class="text-2xl font-bold text-white">1:2.4</p>
+      </div>
+      <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+        <p class="text-slate-400 text-sm">Signals This Month</p>
+        <p class="text-2xl font-bold text-white">42</p>
+      </div>
+      <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700">
+        <p class="text-slate-400 text-sm">Next News</p>
+        <p class="text-2xl font-bold text-amber-400">NFP</p>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex gap-2 mb-6 border-b border-slate-800">
+      <button onclick="showTab('signals')" id="tab-signals" class="px-4 py-2 text-white border-b-2 border-amber-500 font-medium">Signals</button>
+      <button onclick="showTab('news')" id="tab-news" class="px-4 py-2 text-slate-400 hover:text-white">News Trading</button>
+      <button onclick="showTab('history')" id="tab-history" class="px-4 py-2 text-slate-400 hover:text-white">History</button>
+    </div>
+
+    <!-- Signals Tab -->
+    <div id="signals" class="space-y-4">
+      <!-- Sample Signal 1 -->
+      <div class="signal-card bg-slate-800 rounded-xl p-5 border border-slate-700 buy">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">BUY</span>
+            <span class="ml-2 text-xs bg-slate-700 px-2 py-1 rounded">XAUUSD</span>
+            <span class="ml-2 text-xs text-amber-400">High Confidence</span>
+          </div>
+          <span class="text-xs text-slate-400">2 hours ago</span>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm mb-4">
+          <div><span class="text-slate-400">Entry</span><p class="font-mono font-bold">2650.00</p></div>
+          <div><span class="text-slate-400">SL</span><p class="font-mono text-red-400">2638.00</p></div>
+          <div><span class="text-slate-400">TP1</span><p class="font-mono text-green-400">2668.00</p></div>
+          <div><span class="text-slate-400">TP2</span><p class="font-mono text-green-400">2685.00</p></div>
+        </div>
+        <div class="bg-slate-900/50 rounded-lg p-3 text-sm">
+          <p class="font-medium text-amber-400 mb-1">Full Context</p>
+          <p>Price swept liquidity below 2642 and formed a strong bullish engulfing on H1 after rejecting the 4H demand zone. Higher timeframe bias remains bullish. Looking for continuation toward previous highs.</p>
+          <p class="mt-2 text-xs text-slate-400">Risk: 1-1.5% • RR: 1:2.5</p>
+        </div>
+      </div>
+
+      <!-- Sample Signal 2 -->
+      <div class="signal-card bg-slate-800 rounded-xl p-5 border border-slate-700 sell">
+        <div class="flex justify-between items-start mb-3">
+          <div>
+            <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">SELL</span>
+            <span class="ml-2 text-xs bg-slate-700 px-2 py-1 rounded">XAUUSD</span>
+            <span class="ml-2 text-xs text-slate-400">Medium</span>
+          </div>
+          <span class="text-xs text-slate-400">Yesterday</span>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm mb-4">
+          <div><span class="text-slate-400">Entry</span><p class="font-mono font-bold">2672.50</p></div>
+          <div><span class="text-slate-400">SL</span><p class="font-mono text-red-400">2684.00</p></div>
+          <div><span class="text-slate-400">TP1</span><p class="font-mono text-green-400">2655.00</p></div>
+          <div><span class="text-slate-400">TP2</span><p class="font-mono text-green-400">2640.00</p></div>
+        </div>
+        <div class="bg-slate-900/50 rounded-lg p-3 text-sm">
+          <p class="font-medium text-amber-400 mb-1">Full Context</p>
+          <p>Rejection at weekly resistance with clear lower high structure on H4. RSI divergence + supply zone hold. Targeting liquidity below 2650.</p>
+          <p class="mt-2 text-xs text-slate-400">Risk: 1% • RR: 1:2.1</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- News Tab -->
+    <div id="news" class="hidden space-y-4">
+      <div class="bg-slate-800 rounded-xl p-5 border border-amber-500/30">
+        <div class="flex items-center gap-2 mb-3">
+          <i class="fas fa-bolt text-amber-400"></i>
+          <h3 class="font-bold">Upcoming: Non-Farm Payrolls (NFP)</h3>
+          <span class="ml-auto text-xs bg-amber-500/20 text-amber-400 px-2 py-1 rounded">High Impact</span>
+        </div>
+        <p class="text-sm text-slate-300 mb-3">Next Friday • Gold usually sees 80-150 pip moves</p>
+        <div class="bg-slate-900/50 rounded-lg p-3 text-sm">
+          <p class="font-medium text-amber-400 mb-1">Pre-News Plan</p>
+          <p>Wait for the initial spike. Fade extreme moves if no clear breakout of key levels. Full signal will be posted 30 seconds after release with wider stops.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- History Tab -->
+    <div id="history" class="hidden">
+      <div class="bg-slate-800 rounded-xl overflow-hidden border border-slate-700">
+        <table class="w-full text-sm">
+          <thead class="bg-slate-900">
+            <tr>
+              <th class="text-left p-3">Date</th>
+              <th class="text-left p-3">Direction</th>
+              <th class="text-left p-3">Entry</th>
+              <th class="text-left p-3">Result</th>
+              <th class="text-left p-3">Pips</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-700"><td class="p-3">Nov 4</td><td class="text-green-400">BUY</td><td>2645</td><td class="text-green-400">TP2</td><td>+40</td></tr>
+            <tr class="border-t border-slate-700"><td class="p-3">Nov 3</td><td class="text-red-400">SELL</td><td>2668</td><td class="text-red-400">SL</td><td>-12</td></tr>
+            <tr class="border-t border-slate-700"><td class="p-3">Nov 1</td><td class="text-green-400">BUY</td><td>2632</td><td class="text-green-400">TP1</td><td>+22</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800 mt-12 py-6 text-center text-sm text-slate-500">
+    GoldEdge • Free Gold Signals with Full Context • Everything free until further notice
+  </footer>
+
+  <script>
+    function showTab(tab) {
+      ['signals','news','history'].forEach(t => {
+        document.getElementById(t).classList.add('hidden');
+        document.getElementById('tab-'+t).classList.remove('border-b-2','border-amber-500','text-white');
+        document.getElementById('tab-'+t).classList.add('text-slate-400');
+      });
+      document.getElementById(tab).classList.remove('hidden');
+      document.getElementById('tab-'+tab).classList.add('border-b-2','border-amber-500','text-white');
+      document.getElementById('tab-'+tab).classList.remove('text-slate-400');
+    }
+  </script>
+</body>
+</html>
